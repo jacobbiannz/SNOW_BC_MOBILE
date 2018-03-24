@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  snow_bc_mobile.ios:
+    image: snowbcmobileios
+    build:
+      context: .\snow_bc_mobile\snow_bc_mobile.iOS
+      dockerfile: Dockerfile

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:snow_bc_mobile.Views;assembly=snow_bc_mobile"
+			 xmlns:viewModelBase="clr-namespace:snow_bc_mobile.ViewModels.Base;assembly=snow_bc_mobile"
+             xmlns:controls="clr-namespace:snow_bc_mobile.Controls;assembly=snow_bc_mobile"
+             x:Class="snow_bc_mobile.Views.LoginView"
+		 	 viewModelBase:ViewModelLocator.AutoWireViewModel="True">
+
+            <Label Text="Welcome to Xamarin.Forms! - login"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+</ContentPage>

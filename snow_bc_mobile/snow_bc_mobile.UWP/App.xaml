@@ -1,0 +1,8 @@
+﻿<Application
+    x:Class="snow_bc_mobile.UWP.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:snow_bc_mobile.UWP"
+    RequestedTheme="Light">
+
+</Application>

@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="snow_bc_mobile.Views.MainView"
+            xmlns:views="clr-namespace:snow_bc_mobile.Views;assembly=snow_bc_mobile"
+			xmlns:viewModelBase="clr-namespace:snow_bc_mobile.ViewModels.Base;assembly=snow_bc_mobile"
+            xmlns:controls="clr-namespace:snow_bc_mobile.Controls;assembly=snow_bc_mobile"
+            BarBackgroundColor="{StaticResource DarkGreenColor}"
+            BackgroundColor="{StaticResource BackgroundColor}"
+            BarTextColor="{StaticResource WhiteColor}"
+            
+			viewModelBase:ViewModelLocator.AutoWireViewModel="true">
+
+
+    <TabbedPage.Title>
+        <OnPlatform x:TypeArguments="x:String">
+            <On Platform="iOS, UWP, WinRT, WinPhone" Value="eShop on Containers" />
+        </OnPlatform>
+    </TabbedPage.Title>
+
+    <!--<ContentPage.ToolbarItems>
+        <ToolbarItem 
+            Command="{Binding SettingsCommand}"
+            Text="Settings">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="iOS, Android" Value="app_settings" />
+                    <On Platform="UWP, WinRT, WinPhone" Value="Assets/app_settings.png" />
+                </OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+
+        <ToolbarItem 
+            Command="{Binding SettingsCommand}"
+            Text="Settingss">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="iOS, Android" Value="app_settings" />
+                    <On Platform="UWP, WinRT, WinPhone" Value="Assets/app_settings.png" />
+                </OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>-->
+    
+    <views:HomeView  
+        x:Name="MainHomeView">
+        <views:HomeView.Icon>
+            <OnPlatform x:TypeArguments="FileImageSource">
+                <On Platform="iOS, Android" Value="menu_home" />
+                <On Platform="UWP, WinRT, WinPhone" Value="Assets\menu_home.png" />
+            </OnPlatform>
+        </views:HomeView.Icon>
+    </views:HomeView>
+
+    <views:LoginView  
+        x:Name="MainLoginView">
+        <views:LoginView.Icon>
+            <OnPlatform x:TypeArguments="FileImageSource">
+                <On Platform="iOS, Android" Value="menu_destination" />
+                <On Platform="UWP, WinRT, WinPhone" Value="Assets\menu_destination.png" />
+            </OnPlatform>
+        </views:LoginView.Icon>
+    </views:LoginView>
+
+
+</TabbedPage>
