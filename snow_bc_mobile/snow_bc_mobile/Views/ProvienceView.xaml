@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="snow_bc_mobile.Views.ProvienceView"
+             xmlns:views="clr-namespace:snow_bc_mobile.Views;assembly=snow_bc_mobile"
+			 xmlns:viewModelBase="clr-namespace:snow_bc_mobile.ViewModels.Base;assembly=snow_bc_mobile"
+             xmlns:controls="clr-namespace:snow_bc_mobile.Controls;assembly=snow_bc_mobile"
+             viewModelBase:ViewModelLocator.AutoWireViewModel="true">
+    
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Spacing="15" x:Name="layout">
+                <Label Text="Welcome to Xamarin.Forms! - Provience"
+                    
+                    BackgroundColor="{StaticResource DarkGreenColor}"/>
+
+                <Label Text="{Binding Provience.Id}"
+                        BackgroundColor="{StaticResource DarkGreenColor}"/>
+                <Label Text="{Binding Provience.Name}"
+                        BackgroundColor="{StaticResource DarkGreenColor}"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

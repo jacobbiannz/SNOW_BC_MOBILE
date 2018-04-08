@@ -1,5 +1,5 @@
 ﻿using snow_bc_mobile.Services.Settings;
-using snow_bc_mobile.Services;
+using snow_bc_mobile.Services.Navigation;
 using System.Threading.Tasks;
 
 namespace snow_bc_mobile.ViewModels.Base

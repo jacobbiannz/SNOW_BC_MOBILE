@@ -52,15 +52,15 @@
         </views:HomeView.Icon>
     </views:HomeView>
 
-    <views:LoginView  
-        x:Name="MainLoginView">
-        <views:LoginView.Icon>
+    <views:DestinationView  
+        x:Name="MainDestinationView">
+        <views:DestinationView.Icon>
             <OnPlatform x:TypeArguments="FileImageSource">
                 <On Platform="iOS, Android" Value="menu_destination" />
                 <On Platform="UWP, WinRT, WinPhone" Value="Assets\menu_destination.png" />
             </OnPlatform>
-        </views:LoginView.Icon>
-    </views:LoginView>
+        </views:DestinationView.Icon>
+    </views:DestinationView>
 
 
 </TabbedPage>

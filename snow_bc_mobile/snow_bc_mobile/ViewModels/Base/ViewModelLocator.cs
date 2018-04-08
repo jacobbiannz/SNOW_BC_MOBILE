@@ -10,6 +10,9 @@ using snow_bc_mobile.Services.Dependency;
 //using snow_bc_mobile.Services.Order;
 //using snow_bc_mobile.Services.RequestProvider;
 using snow_bc_mobile.Services.Settings;
+using snow_bc_mobile.Services.Navigation;
+using snow_bc_mobile.Services.Destination;
+using snow_bc_mobile.Services.RequestProvider;
 //using snow_bc_mobile.Services.User;
 using snow_bc_mobile.Services;
 
@@ -52,6 +55,8 @@ namespace snow_bc_mobile.ViewModels.Base
             //_container.Register<CheckoutViewModel>();
             //_container.Register<LoginViewModel>();
             _container.Register<MainViewModel>();
+            _container.Register<DestinationViewModel>();
+            _container.Register<ProvienceViewModel>();
             //_container.Register<OrderDetailViewModel>();
             //_container.Register<ProfileViewModel>();
             //_container.Register<SettingsViewModel>();
@@ -60,10 +65,11 @@ namespace snow_bc_mobile.ViewModels.Base
 
             // Services - by default, TinyIoC will register interface registrations as singletons.
             _container.Register<INavigationService, NavigationService>();
+            
             //_container.Register<IDialogService, DialogService>();
             //_container.Register<IOpenUrlService, OpenUrlService>();
             //_container.Register<IIdentityService, IdentityService>();
-            //_container.Register<IRequestProvider, RequestProvider>();
+            _container.Register<IRequestProvider, RequestProvider>();
             _container.Register<IDependencyService, Services.Dependency.DependencyService>();
             _container.Register<ISettingsService, SettingsService>();
             //_container.Register<IFixUriService, FixUriService>();
@@ -85,7 +91,7 @@ namespace snow_bc_mobile.ViewModels.Base
                 //_container.Register<IOrderService, OrderMockService>();
                 //_container.Register<IUserService, UserMockService>();
                 //_container.Register<ICampaignService, CampaignMockService>();
-
+                _container.Register<IDestinationService, DestinationMockService>();
                 UseMockService = true;
             }
             else
@@ -95,7 +101,7 @@ namespace snow_bc_mobile.ViewModels.Base
                 //_container.Register<IOrderService, OrderService>();
                 //_container.Register<IUserService, UserService>();
                 //_container.Register<ICampaignService, CampaignService>();
-
+                _container.Register<IDestinationService, DestinationService>();
                 UseMockService = false;
             }
         }

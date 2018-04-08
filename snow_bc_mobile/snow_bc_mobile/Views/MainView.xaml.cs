@@ -25,7 +25,7 @@ namespace snow_bc_mobile.Views
                         CurrentPage = MainHomeView;
                         break;
                     case 1:
-                        CurrentPage = MainLoginView;
+                        CurrentPage = MainDestinationView;
                         break;
                     case 2:
                         //CurrentPage = BasketView;
@@ -37,7 +37,7 @@ namespace snow_bc_mobile.Views
             });
 
             await ((HomeViewModel)MainHomeView.BindingContext).InitializeAsync(null);
-            await ((LoginViewModel)MainLoginView.BindingContext).InitializeAsync(null);
+            await ((DestinationViewModel)MainDestinationView.BindingContext).InitializeAsync(null);
             //await ((ProfileViewModel)ProfileView.BindingContext).InitializeAsync(null);
             //await ((CampaignViewModel)CampaignView.BindingContext).InitializeAsync(null);
         }
@@ -52,10 +52,10 @@ namespace snow_bc_mobile.Views
                 await (MainHomeView.BindingContext as ViewModelBase).InitializeAsync(null);
             }
             
-            else if (CurrentPage is LoginView)
+            else if (CurrentPage is DestinationView)
             {
                 // Force campaign view refresh every time we access it
-                await (MainLoginView.BindingContext as ViewModelBase).InitializeAsync(null);
+                await (MainDestinationView.BindingContext as ViewModelBase).InitializeAsync(null);
             }
             /*
             else if (CurrentPage is ProfileView)

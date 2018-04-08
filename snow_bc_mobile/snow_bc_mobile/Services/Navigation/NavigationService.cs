@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 
 
-namespace snow_bc_mobile.Services
+namespace snow_bc_mobile.Services.Navigation
 {
     public class NavigationService : INavigationService
     {
