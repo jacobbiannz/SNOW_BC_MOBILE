@@ -4,7 +4,8 @@
     {
         public const string AzureTag = "Azure";
         public const string MockTag = "Mock";
-        public const string DefaultEndpoint = "http://localhost:61125";
+        //public const string DefaultEndpoint = "http://localhost:61125";
+        public const string DefaultEndpoint = "http://192.168.1.65:61125";
 
         private string _baseEndpoint;
         private static readonly GlobalSetting _instance = new GlobalSetting();

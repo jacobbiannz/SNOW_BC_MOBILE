@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="snow_bc_mobile.Views.DestinationView"
+             xmlns:views="clr-namespace:snow_bc_mobile.Views;assembly=snow_bc_mobile"
+			 xmlns:viewModelBase="clr-namespace:snow_bc_mobile.ViewModels.Base;assembly=snow_bc_mobile"
+             xmlns:controls="clr-namespace:snow_bc_mobile.Controls;assembly=snow_bc_mobile"
+              xmlns:behaviors="clr-namespace:snow_bc_mobile.Behaviors;assembly=snow_bc_mobile"
+			
+             viewModelBase:ViewModelLocator.AutoWireViewModel="true">
+
+    <ContentPage.Content>
+        <ScrollView>
+        <StackLayout Spacing="15" x:Name="layout">
+            <Label Text="Welcome to Xamarin.Forms! - Destination"
+                    VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="CenterAndExpand" 
+                    BackgroundColor="{StaticResource DarkGreenColor}"/>
+    
+            <Grid RowSpacing="5">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                    <Grid Grid.Row="0"
+                      BackgroundColor="{StaticResource DarkGreenColor}">
+                        <ListView 
+                            x:Name="Proviences"       
+                            ItemsSource="{Binding Proviences}"
+                            HasUnevenRows="True"
+                            SeparatorVisibility="None"
+                            CachingStrategy="RecycleElement">
+
+                            <ListView.Behaviors>
+                                <behaviors:EventToCommandBehavior                    
+                                        EventName="ItemTapped"
+                                        Command="{Binding ProvienceCommand}"
+                                        EventArgsConverter="{StaticResource ItemTappedEventArgsConverter}"
+                                        />
+                            </ListView.Behaviors>
+                            
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <TextCell Text="{Binding Name}"
+                                              Detail = "{Binding Id}"
+                                             
+                                              />
+                                </DataTemplate>
+                                
+                            </ListView.ItemTemplate>
+                            
+                            
+                        </ListView>
+
+                        <Label Text="Test Tap"
+                               HorizontalOptions="Center"
+                                VerticalOptions="CenterAndExpand" >
+
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer
+                                    Command="{Binding TestCommand}"
+                                    NumberOfTapsRequired="1"/>
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </Grid>
+
+                    <!--<Grid  Grid.Row="0"
+                        BackgroundColor="{StaticResource DarkGreenColor}">
+                        --><!--<AbsoluteLayout>
+                            <Label Text="I'm centered on iPhone 4 but no other device"
+				            AbsoluteLayout.LayoutBounds="115,150,100,100" LineBreakMode="WordWrap"  />
+                            <Label Text="I'm bottom center on every device."
+				             AbsoluteLayout.LayoutBounds=".5,1,.5,.1" AbsoluteLayout.LayoutFlags="All"
+				            LineBreakMode="WordWrap"  />
+                            <BoxView Color="Olive"  AbsoluteLayout.LayoutBounds="1,.5, 25, 100"
+				            AbsoluteLayout.LayoutFlags="PositionProportional" />
+                            <BoxView Color="Red" AbsoluteLayout.LayoutBounds="0,.5,25,100"
+				            AbsoluteLayout.LayoutFlags="PositionProportional" />
+                            <BoxView Color="Blue" AbsoluteLayout.LayoutBounds=".5,0,100,25"
+				            AbsoluteLayout.LayoutFlags="PositionProportional" />
+                        </AbsoluteLayout>--><!--
+                        <AbsoluteLayout>
+                            <BoxView Color="CornflowerBlue" AbsoluteLayout.LayoutBounds="0, 10, 200, 5" />
+                            <BoxView Color="CornflowerBlue" AbsoluteLayout.LayoutBounds="0, 20, 200, 5" />
+                            <BoxView Color="CornflowerBlue" AbsoluteLayout.LayoutBounds="10, 0, 5, 65" />
+                            <BoxView Color="CornflowerBlue" AbsoluteLayout.LayoutBounds="20, 0, 5, 65" />
+                            <Label Text="Stylish Header"
+                                    FontSize="24"
+                                    AbsoluteLayout.LayoutBounds="30, 25, AutoSize, AutoSize"/>
+                        </AbsoluteLayout>
+                        
+                        <BoxView Color="CornflowerBlue"
+                             WidthRequest="160"
+                             HeightRequest="160"
+                             VerticalOptions="Center" 
+                             HorizontalOptions="Fill" />
+                        
+                        --><!--<Button Text="Click Me!"
+                            HorizontalOptions="Center"
+                            VerticalOptions="CenterAndExpand" 
+                            Clicked="OnButtonClicked"/>--><!--
+
+                        <Label Text="Test Tap"
+                               HorizontalOptions="Center"
+                                VerticalOptions="CenterAndExpand" >
+                          
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer
+                                    Command="{Binding TestCommand}"
+                                    NumberOfTapsRequired="1"/>
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </Grid>
+                
+                    <Grid  Grid.Row="1"
+                        BackgroundColor="{StaticResource LightGreenColor}">
+                    <ListView 
+                                x:Name="Countries"       
+                                ItemsSource="{Binding Countries}"
+                                HasUnevenRows="True"
+                                SeparatorVisibility="None"
+                                CachingStrategy="RecycleElement"
+                                >
+
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <TextCell Text="{Binding Name}" />
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </Grid>-->
+                
+
+                
+            </Grid>
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

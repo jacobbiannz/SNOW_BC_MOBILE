@@ -3,7 +3,7 @@ using snow_bc_mobile.Services.Dependency;
 //using snow_bc_mobile.Services.Location;
 using snow_bc_mobile.Services.Settings;
 using snow_bc_mobile.ViewModels.Base;
-using snow_bc_mobile.Services;
+using snow_bc_mobile.Services.Navigation;
 using System;
 using System.Diagnostics;
 using System.Globalization;
@@ -57,8 +57,10 @@ namespace snow_bc_mobile
         private void InitApp()
         {
             _settingsService = ViewModelLocator.Resolve<ISettingsService>();
-            if (!_settingsService.UseMocks)
-                ViewModelLocator.UpdateDependencies(_settingsService.UseMocks);
+            //if (!_settingsService.UseMocks)
+            //    ViewModelLocator.UpdateDependencies(_settingsService.UseMocks);
+            if (true)
+                ViewModelLocator.UpdateDependencies(true);
         }
 
         private Task InitNavigation()

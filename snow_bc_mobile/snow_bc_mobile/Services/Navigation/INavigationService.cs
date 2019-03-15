@@ -1,7 +1,7 @@
 ﻿using snow_bc_mobile.ViewModels.Base;
 using System.Threading.Tasks;
 
-namespace snow_bc_mobile.Services
+namespace snow_bc_mobile.Services.Navigation
 {
     public interface INavigationService
     {
